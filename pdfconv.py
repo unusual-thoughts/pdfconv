@@ -27,6 +27,7 @@ class ProgressBarWindow(Gtk.Window):
 tmpfile = NamedTemporaryFile(suffix='.pdf', prefix='pdfconv_', dir='/tmp') 
 win = ProgressBarWindow()
 win.connect("delete-event", Gtk.main_quit)
+win.set_position(Gtk.WindowPosition.CENTER)
 win.show_all()
 Gtk.main()
 call(['evince', tmpfile.name])
